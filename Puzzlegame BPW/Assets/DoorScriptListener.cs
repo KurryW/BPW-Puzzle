@@ -5,9 +5,14 @@ using UnityEngine.Events;
 
 public class DoorScriptListener : MonoBehaviour
 {
+    [SerializeField] GameObject deur;
+
+    bool isOpened = false;
+    
     public List<DoorTrigger> Doortriggers;
     public UnityEvent OnDoorOpen;
     public GameObject door;
+
     public void SetTriggerState()
     {
         bool shouldDoorOpen = true;
@@ -20,7 +25,8 @@ public class DoorScriptListener : MonoBehaviour
         if(shouldDoorOpen)
         {
             OnDoorOpen?.Invoke();
-            Destroy(door);
+            deur.transform.position += new Vector3(0, (float)0.05, (float)0.04);
+            //Destroy(door);
             Debug.Log("deur gaat open");
         }
     }
