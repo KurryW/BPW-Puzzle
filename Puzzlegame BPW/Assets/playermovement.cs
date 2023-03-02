@@ -13,6 +13,8 @@ public class playermovement : MonoBehaviour
     //public Vector3 deltaMove;
     //public float speed = 1;
 
+    public float turnSpeed = 100.0f;
+
 
     void Start()
     {
@@ -29,6 +31,10 @@ public class playermovement : MonoBehaviour
         //turn.x += Input.GetAxis("Mouse X") * sensitivity;
         //turn.y += Input.GetAxis("Mouse Y") * sensitivity;
         //transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
+
+        float turn = Input.GetAxis("Horizontal");
+        transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+
     }
 
     private void FixedUpdate()

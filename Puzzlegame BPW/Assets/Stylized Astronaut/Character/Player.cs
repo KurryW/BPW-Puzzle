@@ -14,7 +14,8 @@ public class Player : MonoBehaviour {
 		void Start () {
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
-		}
+			Cursor.lockState = CursorLockMode.Locked;
+    }
 
 		void Update (){
 			if (Input.GetKey ("w")) {
