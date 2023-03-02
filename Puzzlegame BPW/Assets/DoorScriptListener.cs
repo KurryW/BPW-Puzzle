@@ -25,7 +25,7 @@ public class DoorScriptListener : MonoBehaviour
         if(shouldDoorOpen)
         {
             OnDoorOpen?.Invoke();
-            deur.transform.position += new Vector3(0, (float)0.05, (float)0.04);
+            deur.transform.position += new Vector3((float)-0.6, (float)0.6, (float)0.4);
             //Destroy(door);
             Debug.Log("deur gaat open");
         }
