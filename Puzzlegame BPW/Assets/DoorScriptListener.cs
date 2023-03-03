@@ -12,7 +12,12 @@ public class DoorScriptListener : MonoBehaviour
     public List<DoorTrigger> Doortriggers;
     public UnityEvent OnDoorOpen;
     public GameObject door;
+    private Vector3 standardLocationDoor;
 
+    public void Start()
+    {
+        standardLocationDoor = door.transform.position;
+    }
     public void SetTriggerState()
     {
         bool shouldDoorOpen = true;
@@ -25,9 +30,14 @@ public class DoorScriptListener : MonoBehaviour
         if(shouldDoorOpen)
         {
             OnDoorOpen?.Invoke();
-            deur.transform.position += new Vector3((float)-0.6, (float)0.6, (float)0.4);
+            deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
             //Destroy(door);
             Debug.Log("deur gaat open");
+        }
+
+        else if(shouldDoorOpen == false)
+        {
+            door.transform.position = standardLocationDoor;
         }
     }
 
