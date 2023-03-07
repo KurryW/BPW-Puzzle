@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadsceneAll : MonoBehaviour
 {
+    [SerializeField] private string sceneName;
+
     public void QuitGame()
     {
         Application.Quit();
@@ -12,8 +14,7 @@ public class LoadsceneAll : MonoBehaviour
 
     public void LoadSceneButton()
     {
-        SceneManager.LoadScene("Levels 1");
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(sceneName);
     }
 
     void OnTriggerEnter(Collider other)

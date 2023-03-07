@@ -31,7 +31,7 @@ public class playermovement : MonoBehaviour
         {
             anim.SetInteger("AnimationPar", 0);
         }
-        else if(Input.GetKey(KeyCode.W))
+        else if(Input.GetAxisRaw("Vertical") != 0) 
         {
             anim.SetInteger("AnimationPar", 1);
         }

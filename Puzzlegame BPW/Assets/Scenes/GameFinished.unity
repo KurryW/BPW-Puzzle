@@ -505,8 +505,9 @@ GameObject:
   - component: {fileID: 237141060}
   - component: {fileID: 237141059}
   - component: {fileID: 237141058}
+  - component: {fileID: 237141061}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Play again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,13 +578,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 237141061}
+        m_TargetAssemblyTypeName: LoadsceneAll, Assembly-CSharp
+        m_MethodName: LoadSceneButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -627,6 +628,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237141056}
   m_CullTransparentMesh: 1
+--- !u!114 &237141061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237141056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Menu
 --- !u!65 &251913257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3601,6 +3615,7 @@ GameObject:
   - component: {fileID: 2080902346}
   - component: {fileID: 2080902345}
   - component: {fileID: 2080902344}
+  - component: {fileID: 2080902347}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -3673,13 +3688,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2080902347}
+        m_TargetAssemblyTypeName: LoadsceneAll, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3723,6 +3738,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080902342}
   m_CullTransparentMesh: 1
+--- !u!114 &2080902347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080902342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &2081921266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,6 +5784,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Blokje: {fileID: 1292044280}
+  colorGreen: {fileID: 0}
+  colorRed: {fileID: 0}
   doWeHaveTheRightBlock: 0
 --- !u!65 &7949231660015594372
 BoxCollider:
@@ -5958,6 +5988,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Blokje: {fileID: 1477377350}
+  colorGreen: {fileID: 0}
+  colorRed: {fileID: 0}
   doWeHaveTheRightBlock: 0
 --- !u!65 &8259256175068785397
 BoxCollider:
@@ -6127,6 +6159,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Blokje: {fileID: 1353447614}
+  colorGreen: {fileID: 0}
+  colorRed: {fileID: 0}
   doWeHaveTheRightBlock: 0
 --- !u!65 &8625578983976242712
 BoxCollider:
@@ -6198,6 +6232,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Blokje: {fileID: 981194494}
+  colorGreen: {fileID: 0}
+  colorRed: {fileID: 0}
   doWeHaveTheRightBlock: 0
 --- !u!65 &8928235318281116109
 BoxCollider:

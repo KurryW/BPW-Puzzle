@@ -1436,15 +1436,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981194494}
-  m_LocalRotation: {x: -0.31675258, y: 0.2215115, z: -0.10903616, w: 0.91581196}
-  m_LocalPosition: {x: -20.31, y: 20.97, z: 7.5}
+  m_LocalRotation: {x: 0.25931928, y: 0.120415956, z: -0.21553707, w: 0.9337009}
+  m_LocalPosition: {x: -20.16, y: 23.48, z: 5.13}
   m_LocalScale: {x: 0.29289, y: 0.29289, z: 0.29289}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 707122633}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: -32.132, y: 34.103, z: -23.675}
+  m_LocalEulerAnglesHint: {x: 32.423, y: 7.699, z: -23.756}
 --- !u!54 &981194500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2966,10 +2966,10 @@ MonoBehaviour:
   deur: {fileID: 1976500764}
   raket: {fileID: 0}
   Doortriggers:
-  - {fileID: 8928235318281116108}
-  - {fileID: 8625578983976242711}
-  - {fileID: 8259256175068785396}
-  - {fileID: 7949231660015594371}
+  - {fileID: 8116012513413589629}
+  - {fileID: 8179412914283108273}
+  - {fileID: 7378433892145870142}
+  - {fileID: 9180280473701684174}
   - {fileID: 8260582755295702720}
   - {fileID: 2523084756562344262}
   OnDoorOpen:
@@ -2988,6 +2988,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   door: {fileID: 1976500764}
+  doorOpenOffset: {x: -0.6, y: 0.7, z: 0.4}
 --- !u!4 &1376603483
 Transform:
   m_ObjectHideFlags: 0
@@ -3183,8 +3184,9 @@ GameObject:
   - component: {fileID: 1450745432}
   - component: {fileID: 1450745431}
   - component: {fileID: 1450745430}
+  - component: {fileID: 1450745433}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3255,13 +3257,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1450745433}
+        m_TargetAssemblyTypeName: LoadsceneAll, Assembly-CSharp
+        m_MethodName: LoadSceneButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3305,6 +3307,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450745428}
   m_CullTransparentMesh: 1
+--- !u!114 &1450745433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450745428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Menu
 --- !u!1 &1457107634
 GameObject:
   m_ObjectHideFlags: 3
@@ -3882,9 +3897,9 @@ GameObject:
   - component: {fileID: 1976500769}
   - component: {fileID: 1976500768}
   - component: {fileID: 1976500767}
-  - component: {fileID: 1976500766}
+  - component: {fileID: 1976500771}
   m_Layer: 0
-  m_Name: Deur
+  m_Name: DeurSaturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3897,7 +3912,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976500764}
-  m_LocalRotation: {x: 0.2627823, y: -0, z: -0, w: 0.9648552}
+  m_LocalRotation: {x: 0.36528584, y: -0.000000029802315, z: -0.000000044703473, w: 0.9308954}
   m_LocalPosition: {x: 0.1095, y: 0.0633, z: -0.264}
   m_LocalScale: {x: 0.6874348, y: 0.08868508, z: 0.68743485}
   m_ConstrainProportionsScale: 0
@@ -3905,19 +3920,7 @@ Transform:
   - {fileID: 770561100}
   m_Father: {fileID: 543450652501459382}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1976500766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976500764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalEulerAnglesHint: {x: 42.85, y: 0, z: 0}
 --- !u!65 &1976500767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3994,6 +3997,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976500764}
   m_Mesh: {fileID: 7857590630482128698, guid: e7a2f6fdacec95e4f9b77cca13c1943d, type: 3}
+--- !u!114 &1976500771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976500764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0204ab94a96ee854d9ec5cdc2f1dc2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &290597669666648797
 Transform:
   m_ObjectHideFlags: 0
@@ -4576,6 +4591,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1192245760}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
@@ -4772,6 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1971500d4b9c7044a13735b87704edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!4 &3562913954814875491
 Transform:
   m_ObjectHideFlags: 0
@@ -5712,6 +5729,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1477377350}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
@@ -5943,6 +5961,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1292044280}
   colorGreen: {fileID: 0}
   colorRed: {fileID: 0}
@@ -6011,6 +6030,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 981194494}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
@@ -6083,6 +6103,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1353447614}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
@@ -6201,6 +6222,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1477377350}
   colorGreen: {fileID: 0}
   colorRed: {fileID: 0}
@@ -6288,6 +6310,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1464507599}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
@@ -6429,6 +6452,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1353447614}
   colorGreen: {fileID: 0}
   colorRed: {fileID: 0}
@@ -6502,6 +6526,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 981194494}
   colorGreen: {fileID: 0}
   colorRed: {fileID: 0}
@@ -6605,6 +6630,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  putBlockOnTrigger: 0
   Blokje: {fileID: 1292044280}
   colorGreen: {fileID: 2100000, guid: 7d2f7e7bda311e64b981bd723a7f504d, type: 2}
   colorRed: {fileID: 2100000, guid: 673d1844c639f4e43afdfbff1054b932, type: 2}
