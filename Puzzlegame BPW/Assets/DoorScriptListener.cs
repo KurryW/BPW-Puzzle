@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class DoorScriptListener : MonoBehaviour
 {
     [SerializeField] GameObject deur;
+    [SerializeField] GameObject raket;
 
     bool isOpened = false;
     
@@ -31,6 +32,7 @@ public class DoorScriptListener : MonoBehaviour
         {
             OnDoorOpen?.Invoke();
             deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
+            raket.transform.position += new Vector3((float)0, (float)4, (float)-6);
             //Destroy(door);
             Debug.Log("deur gaat open");
         }
