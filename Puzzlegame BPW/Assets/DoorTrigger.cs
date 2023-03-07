@@ -8,14 +8,10 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField] private UnityEvent triggerPressed;
 
     public GameObject Blokje;
+    public Material colorGreen;
+    public Material colorRed;
 
     public bool doWeHaveTheRightBlock = false;
-
-    void Start()
-    {
-
-
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -24,6 +20,8 @@ public class DoorTrigger : MonoBehaviour
             Debug.Log("ik heb mijn blokje");
             triggerPressed?.Invoke();
             doWeHaveTheRightBlock = true;
+            Blokje.GetComponent<Renderer>().material.color = Color.green;
+
         }
     }
     void OnTriggerExit(Collider other)
@@ -32,6 +30,7 @@ public class DoorTrigger : MonoBehaviour
         {
             Debug.Log("ik heb mijn blokje niet meer");
             doWeHaveTheRightBlock = false;
+            Blokje.GetComponent<Renderer>().material.color = Color.red;
         }
 
     }

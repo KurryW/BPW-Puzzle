@@ -3021,6 +3021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deur: {fileID: 1254180583329315050}
+  raket: {fileID: 0}
   Doortriggers:
   - {fileID: 8928235318281116108}
   - {fileID: 8625578983976242711}
@@ -5810,7 +5811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8179412914283108272
 Transform:
   m_ObjectHideFlags: 0
