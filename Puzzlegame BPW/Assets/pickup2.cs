@@ -13,7 +13,7 @@ public class pickup2 : MonoBehaviour
     private bool canpickup = false;
     private GameObject ObjectIwantToPickUp;
 
-
+    public AudioSource pickupSound;
 
     // Update is called once per frame
     void Update()
@@ -24,11 +24,13 @@ public class pickup2 : MonoBehaviour
             {
                 if (canpickup)
                 {
+                    pickupSound.enabled = true;
                     PickupObject(ObjectIwantToPickUp);
                 }
             }
             else
             {
+                pickupSound.enabled = false;
                 DropObject();
             }
         }

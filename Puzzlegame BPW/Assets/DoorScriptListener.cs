@@ -15,6 +15,8 @@ public class DoorScriptListener : MonoBehaviour
     public GameObject door;
     private Vector3 standardLocationDoor;
 
+    public AudioSource nextlevelSound;
+
     [SerializeField] private Vector3 doorOpenOffset;
 
     public void Start()
@@ -33,6 +35,7 @@ public class DoorScriptListener : MonoBehaviour
         if(shouldDoorOpen)
         {
             OnDoorOpen?.Invoke();
+            nextlevelSound.enabled = true;
             //deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
             deur.transform.position += doorOpenOffset;
             raket.transform.position += new Vector3((float)0, (float)4, (float)-6);

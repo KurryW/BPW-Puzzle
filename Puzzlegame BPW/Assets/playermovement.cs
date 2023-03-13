@@ -11,6 +11,8 @@ public class playermovement : MonoBehaviour
 
     private Animator anim;
 
+    public AudioSource footstepsSound;
+
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class playermovement : MonoBehaviour
     void Update()
     {
 
+
         moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         float turn = Input.GetAxis("Horizontal");
@@ -29,10 +32,12 @@ public class playermovement : MonoBehaviour
 
         if (moveDirection == Vector3.zero)
         {
+            footstepsSound.enabled = false;
             anim.SetInteger("AnimationPar", 0);
         }
         else if(Input.GetAxisRaw("Vertical") != 0) 
         {
+            footstepsSound.enabled = true;
             anim.SetInteger("AnimationPar", 1);
         }
 
