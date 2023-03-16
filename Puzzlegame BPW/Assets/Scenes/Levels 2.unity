@@ -3076,6 +3076,7 @@ MonoBehaviour:
   door: {fileID: 1976500764}
   nextlevelSound: {fileID: 1376603484}
   doorOpenOffset: {x: -0.6, y: 0.7, z: 0.4}
+  raketOpenOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &1376603483
 Transform:
   m_ObjectHideFlags: 0
@@ -4441,7 +4442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1976500765
 Transform:
   m_ObjectHideFlags: 0
@@ -4450,7 +4451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976500764}
   m_LocalRotation: {x: 0.36528584, y: -0.000000029802315, z: -0.000000044703473, w: 0.9308954}
-  m_LocalPosition: {x: 0.1095, y: 0.0633, z: -0.264}
+  m_LocalPosition: {x: 0.1095, y: 0.0916, z: -0.2946}
   m_LocalScale: {x: 0.6874348, y: 0.08868508, z: 0.68743485}
   m_ConstrainProportionsScale: 0
   m_Children:

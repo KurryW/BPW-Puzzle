@@ -80,7 +80,7 @@ MonoBehaviour:
     value: 10
   mixerRedOutGreenIn:
     overrideState: 1
-    value: 80
+    value: 77
   mixerRedOutBlueIn:
     overrideState: 1
     value: -9
@@ -89,7 +89,7 @@ MonoBehaviour:
     value: -11
   mixerGreenOutGreenIn:
     overrideState: 1
-    value: 89
+    value: 109
   mixerGreenOutBlueIn:
     overrideState: 1
     value: -5
@@ -1338,10 +1338,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.512
+    value: 0.454
   smoothness:
     overrideState: 1
-    value: 0.247
+    value: 0.333
   roundness:
     overrideState: 1
     value: 1

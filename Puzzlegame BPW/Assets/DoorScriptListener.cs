@@ -30,6 +30,7 @@ public class DoorScriptListener : MonoBehaviour
         foreach (DoorTrigger trigger in Doortriggers)
         {
             shouldDoorOpen &= trigger.doWeHaveTheRightBlock;
+            
 
         }
 
@@ -38,17 +39,18 @@ public class DoorScriptListener : MonoBehaviour
             OnDoorOpen?.Invoke();
             nextlevelSound.enabled = true;
             //deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
-            deur.transform.position += doorOpenOffset;
+            deur.gameObject.SetActive(true);
+            raket.gameObject.SetActive(true);
             //raket.transform.position += new Vector3((float)0, (float)4, (float)-6);
-            raket.transform.position += raketOpenOffset;
+            //raket.transform.position += raketOpenOffset;
             //Destroy(door);
             Debug.Log("deur gaat open");
         }
 
-        else if(shouldDoorOpen == false)
-        {
-            door.transform.position = standardLocationDoor;
-        }
+        //else if(shouldDoorOpen == false)
+        //{
+        //    door.transform.position = standardLocationDoor;
+        //}
     }
 
 }
