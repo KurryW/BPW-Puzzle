@@ -18,6 +18,7 @@ public class DoorScriptListener : MonoBehaviour
     public AudioSource nextlevelSound;
 
     [SerializeField] private Vector3 doorOpenOffset;
+    [SerializeField] private Vector3 raketOpenOffset;
 
     public void Start()
     {
@@ -38,7 +39,8 @@ public class DoorScriptListener : MonoBehaviour
             nextlevelSound.enabled = true;
             //deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
             deur.transform.position += doorOpenOffset;
-            raket.transform.position += new Vector3((float)0, (float)4, (float)-6);
+            //raket.transform.position += new Vector3((float)0, (float)4, (float)-6);
+            raket.transform.position += raketOpenOffset;
             //Destroy(door);
             Debug.Log("deur gaat open");
         }

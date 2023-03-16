@@ -1342,6 +1342,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &838455348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8854619882081110099, guid: 6ace0503f5f5e6e44831975f9aeed05d, type: 3}
+  m_PrefabInstance: {fileID: 1927378998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &948574481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,7 +3050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deur: {fileID: 1976500764}
-  raket: {fileID: 0}
+  raket: {fileID: 838455348}
   Doortriggers:
   - {fileID: 8116012513413589629}
   - {fileID: 8179412914283108273}
