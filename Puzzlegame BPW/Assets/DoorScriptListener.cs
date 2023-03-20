@@ -7,13 +7,13 @@ public class DoorScriptListener : MonoBehaviour
 {
     [SerializeField] GameObject deur;
     [SerializeField] GameObject raket;
+    [SerializeField] GameObject deurAnimation;
 
     bool isOpened = false;
     
     public List<DoorTrigger> Doortriggers;
     public UnityEvent OnDoorOpen;
     public GameObject door;
-    private Vector3 standardLocationDoor;
 
     public AudioSource nextlevelSound;
 
@@ -22,7 +22,6 @@ public class DoorScriptListener : MonoBehaviour
 
     public void Start()
     {
-        standardLocationDoor = door.transform.position;
     }
     public void SetTriggerState()
     {
@@ -40,6 +39,7 @@ public class DoorScriptListener : MonoBehaviour
             nextlevelSound.enabled = true;
             //deur.transform.position += new Vector3((float)-0.6, (float)0.5, (float)0.4);
             deur.gameObject.SetActive(true);
+            deurAnimation.gameObject.SetActive(true);
             raket.gameObject.SetActive(true);
             //raket.transform.position += new Vector3((float)0, (float)4, (float)-6);
             //raket.transform.position += raketOpenOffset;
@@ -47,10 +47,7 @@ public class DoorScriptListener : MonoBehaviour
             Debug.Log("deur gaat open");
         }
 
-        //else if(shouldDoorOpen == false)
-        //{
-        //    door.transform.position = standardLocationDoor;
-        //}
+        
     }
 
 }

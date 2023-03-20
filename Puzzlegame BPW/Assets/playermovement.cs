@@ -13,6 +13,8 @@ public class playermovement : MonoBehaviour
 
     public AudioSource footstepsSound;
 
+    [SerializeField] GameObject vinkje1;
+
 
     void Start()
     {
@@ -39,6 +41,8 @@ public class playermovement : MonoBehaviour
         {
             footstepsSound.enabled = true;
             anim.SetInteger("AnimationPar", 1);
+            vinkje1.gameObject.SetActive(true);
+
         }
 
 

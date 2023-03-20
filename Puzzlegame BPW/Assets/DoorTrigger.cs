@@ -9,6 +9,10 @@ public class DoorTrigger : MonoBehaviour
 
     [SerializeField] private bool putBlockOnTrigger = false;
 
+    [SerializeField] GameObject vinkje2;
+    [SerializeField] GameObject letterInDot;
+    [SerializeField] GameObject Dot;
+
     public GameObject Blokje;
     public Material colorGreen;
     public Material colorRed;
@@ -33,6 +37,9 @@ public class DoorTrigger : MonoBehaviour
             triggerPressed?.Invoke();
             doWeHaveTheRightBlock = true;
             Blokje.GetComponent<Renderer>().material.color = Color.green;
+            letterInDot.gameObject.SetActive(true);
+            Destroy(Dot);
+            vinkje2.gameObject.SetActive(true);
 
         }
     }
